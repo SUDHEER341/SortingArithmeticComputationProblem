@@ -1,4 +1,5 @@
-read -p "Enter first number: " num_1
-read -p "Enter second number: " num_2
-read -p "Enter third number: " num_3
-echo "The given three numbers are: $num_1 $num_2 $num_3"
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+read -p "Enter third number: " num3
+echo "The given three numbers are: $num1 $num2 $num3"
+echo "$num1 + $num2 * $num3 = $(( num1 + num2 * num3 ))"
