@@ -13,14 +13,18 @@ echo "$num_3 + $num_1 / $num_2 = $third_computation"
 echo "$num_1 % $num_2 + $num_3 = $fourth_computation"
 
 declare -A dictionary
-
+declare -a array
 
 dictionary[first_computation]=$first_computation
 dictionary[second_computation]=$second_computation
 dictionary[third_computation]=$third_computation
 dictionary[fourth_computation]=$fourth_computation
 
+index=0
 for computation in ${!dictionary[@]}
 do 
-    echo "$computation = ${dictionary[$computation]}"
+    array[index++]=${dictionary[$computation]}
 done
+
+echo "The computation results array is"
+echo ${array[@]}
